@@ -136,10 +136,12 @@ void setup(){
   servo_A3.attach(A3);
   servo_A4.attach(A4);
   servo_A5.attach(A5);
+  Serial.println("set up done");
 }
 
 void loop(){
   ps2x.read_gamepad(false, 0);
+  Serial.println("readings...");
   delay(3);
   if (ps2x.Button(PSB_PAD_UP)) {
     forward();
